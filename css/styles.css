@@ -70,8 +70,8 @@ body {
 }
 
 .section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .section-banner {
@@ -130,7 +130,7 @@ body {
     line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
-    width: 320px;
+    max-width: 320px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 72px;
@@ -144,6 +144,7 @@ body {
         color: var(--white-fff-color);
         text-align: center;
         letter-spacing: 0.02em;
+        max-width: 496px;
     }
 }
 
@@ -917,6 +918,7 @@ a.team-smm-link:focus {
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .footer-container {
         padding: 0 108px;
+        justify-content: left;
     }
 }
 
