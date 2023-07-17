@@ -130,6 +130,10 @@ body {
     line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 72px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -140,6 +144,19 @@ body {
         color: var(--white-fff-color);
         text-align: center;
         letter-spacing: 0.02em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-title {
+        width: 496px;
+        margin-bottom: 36px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .main-title {
+        margin-bottom: 48px;
     }
 }
 
@@ -395,27 +412,6 @@ body {
     }
 }
 
-.main-title {
-    max-width: 320px;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 72px;
-}
-
-@media only screen and (min-width: 768px) {
-    .main-title {
-        max-width: 496px;
-        margin-bottom: 36px;
-    }
-}
-
-@media only screen and (min-width: 1158px) {
-    .main-title {
-        margin-bottom: 48px;
-    }
-}
-
-
 .banner-btn {
     display: block;
     border: none;
@@ -664,6 +660,21 @@ a.team-smm-link:focus {
   |============================
 */
 
+@media only screen and (min-width: 768px) {
+    .customers-container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
 .section-customers {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -891,12 +902,50 @@ a.team-smm-link:focus {
     background-color: var(--nawy-blue-color);
     color: var(--cloud-color);
     padding: 98px 0 96px 0;
+    text-align: center;
 }
 
-.footer>.container {
-    /* display: flex;
-    align-items: baseline; */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
+    align-items: center;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-container {
+        padding: 0 108px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        gap: 72px 24px;
+        align-items: baseline;
+    }
+}
+
+
+/* @media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+} */
+
+/* @media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer>.container {
+        display: flex;
+        align-items: baseline;
+    }
+} */
+
 
 .footer-link {
     font-family: "Raleway", sans-serif;
@@ -930,13 +979,17 @@ a.team-smm-link:focus {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
-    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-title-smm {
+        text-align: left;
+    }
 }
 
 .footer-log-text {
     /* margin-right: 120px; */
-    text-align: center;
-    margin-bottom: 72px;
+
 }
 
 .footer-smm-list {
@@ -944,8 +997,6 @@ a.team-smm-link:focus {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    margin-top: 8px;
-    margin-bottom: 72px;
 
 }
 
@@ -980,18 +1031,25 @@ a.footer-smm-link {
 /* Footer Subscribe Styles */
 
 .footer-suscribe {
+    width: 100%;
     /* padding-left: 80px; */
 }
 
 .subscribe-form {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px; */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px;
+    }
 }
 
 .footer-suscribe-input {
-    /* width: 264px; */
+
     width: 100%;
     height: 40px;
     padding: 8px 16px;
@@ -1005,7 +1063,12 @@ a.footer-smm-link {
     letter-spacing: 0.04em;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-suscribe-input {
+        width: 264px;
+    }
 }
 
 .footer-suscribe-input:focus {
@@ -1034,6 +1097,12 @@ a.footer-smm-link {
     line-height: 1.5;
     letter-spacing: 0.64px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-subsribe-btn {
+        margin: 0;
+    }
 }
 
 .footer-subsribe-btn:hover,
