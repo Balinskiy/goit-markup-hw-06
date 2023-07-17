@@ -97,8 +97,8 @@ body {
     padding-right: 16px;
 
 
-    outline: 1px solid red;
-    outline-offset: -2px;
+    /* outline: 1px solid red;
+    outline-offset: -2px; */
 }
 
 
@@ -954,7 +954,7 @@ a.team-smm-link:focus {
     color: var(--cloud-color);
     letter-spacing: 0.02em;
     max-width: 268px;
-    height: 70px;
+    /* height: 70px; */
     margin: 0 auto;
 }
 
@@ -1026,12 +1026,20 @@ a.footer-smm-link {
 /* Footer Subscribe Styles */
 
 .footer-suscribe {
-    width: 100%;
+    /* width: 100%; */
     /* padding-left: 80px; */
 }
 
+@media only screen and (max-width: 767px) {
+    .footer-suscribe {
+        width: 100%;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
-    .footer-suscribe {}
+    .footer-suscribe {
+        margin-left: auto;
+    }
 }
 
 .subscribe-form {
