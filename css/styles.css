@@ -74,18 +74,14 @@ body {
     padding-bottom: 96px;
 }
 
-.section-banner {
-    padding-bottom: 48px;
-}
-
 @media only screen and (min-width: 1158px) {
     .section {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
-    .section-banner {
-        padding-bottom: 60px;
+    .section-advantages {
+        padding-top: 120px;
     }
 }
 
@@ -607,7 +603,7 @@ body {
 @media only screen and (min-width: 768px) {
     .team-item {
         width: calc((100% - 24px) / 2);
-        margin-bottom: 72px;
+        /* margin-bottom: 72px; */
     }
 }
 
