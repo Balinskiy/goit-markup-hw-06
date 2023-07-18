@@ -48,6 +48,7 @@ ol {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -76,12 +77,8 @@ body {
 
 @media only screen and (min-width: 1158px) {
     .section {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .section-advantages {
         padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
 
@@ -115,6 +112,8 @@ body {
 @media only screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -325,6 +324,24 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (min-width: 768px) {
+    .address-link {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.48px;
+        color: var(--slate-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .address-link {
+        font-size: 16px;
+        letter-spacing: 0.32px;
+    }
+}
+
 .address-link:hover,
 .address-link:focus {
     color: var(--ocean-blue-color);
@@ -361,17 +378,14 @@ body {
 /* Hero section */
 
 .section-banner {
-    max-width: 1440px;
     background-color: var(--nawy-blue-color);
-    padding: 188px 0;
+    padding: 112px 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/bg-mob@1x.jpg);
 }
-
-/* Retina screen */
 
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
@@ -380,6 +394,16 @@ body {
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/bg-mob@2x.jpg);
     }
 }
+
+@media only screen and (min-width: 1158px) {
+    .section-banner {
+        max-width: 1440px;
+        padding: 188px 0;
+    }
+}
+
+
+/* Retina screen */
 
 @media only screen and (min-width: 428px) {
     .section-banner {
@@ -534,7 +558,6 @@ body {
 /* What are we doing section */
 
 .section-wedoing {
-    /* padding-bottom: 120px; */
     background-color: var(--white-fff-color);
 }
 
@@ -562,7 +585,7 @@ body {
 
 @media only screen and (min-width: 1158px) {
     .section-team {
-        padding: 60px;
+        padding: 120px 0;
     }
 }
 
@@ -657,20 +680,11 @@ a.team-smm-link:focus {
   |============================
 */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
     .customers-container {
-        padding-left: 108px;
-        padding-right: 108px;
+        width: 584px;
     }
 }
-
-@media only screen and (min-width: 1158px) {
-    .customers-container {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
 
 .section-customers {
     padding-top: 96px;
@@ -680,9 +694,8 @@ a.team-smm-link:focus {
 
 @media only screen and (min-width: 1158px) {
     .section-customers {
-        /* padding-top: 120px;
-        padding-bottom: 120px; */
-        padding: 60px 0;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
 
@@ -804,7 +817,6 @@ a.team-smm-link:focus {
     transition-property: shadow;
     transition-duration: 250ms;
     overflow: hidden;
-
 }
 
 .portfolio-item:hover,
@@ -888,8 +900,6 @@ a.team-smm-link:focus {
     transform: translateY(0%);
 }
 
-
-
 /**
   |============================
   | Footer
@@ -903,19 +913,24 @@ a.team-smm-link:focus {
     text-align: center;
 }
 
-
 .footer-container {
     display: flex;
     flex-direction: column;
-    gap: 72px;
     justify-content: center;
     align-items: center;
 }
 
+@media only screen and (max-width: 767px) {
+    .footer-container {
+        gap: 72px;
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .footer-container {
-        padding: 0 108px;
+        width: 584px;
         justify-content: left;
+        gap: 72px 24px;
     }
 }
 
@@ -924,7 +939,6 @@ a.team-smm-link:focus {
         flex-direction: row;
         flex-wrap: wrap;
         text-align: left;
-        gap: 72px 24px;
         align-items: baseline;
     }
 }
@@ -932,10 +946,8 @@ a.team-smm-link:focus {
 @media only screen and (min-width: 1158px) {
     .footer-container {
         flex-wrap: nowrap;
-
     }
 }
-
 
 .footer-link {
     font-family: "Raleway", sans-serif;
@@ -954,7 +966,6 @@ a.team-smm-link:focus {
     color: var(--cloud-color);
     letter-spacing: 0.02em;
     max-width: 268px;
-    /* height: 70px; */
     margin: 0 auto;
 }
 
@@ -1024,11 +1035,6 @@ a.footer-smm-link {
 }
 
 /* Footer Subscribe Styles */
-
-.footer-suscribe {
-    /* width: 100%; */
-    /* padding-left: 80px; */
-}
 
 @media only screen and (max-width: 767px) {
     .footer-suscribe {
@@ -1155,15 +1161,20 @@ a.footer-smm-link {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 408px;
+    width: 320px;
     min-height: 584px;
     flex-shrink: 0;
     padding: 72px 24px 24px 24px;
-
     border-radius: 4px;
     background: #FCFCFC;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 468px) {
+    .modal {
+        width: 408px;
+    }
 }
 
 .modal-btn {
@@ -1384,7 +1395,6 @@ a.footer-smm-link {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 136px 20px 20px;
     background-color: var(--white-fff-color);
     z-index: 999;
 
@@ -1405,8 +1415,8 @@ a.footer-smm-link {
 
 .mobile-menu {
     width: fit-content;
-    margin-top: 80px;
-    margin-left: 40px;
+    padding-top: 80px;
+    padding-left: 40px;
     margin-bottom: auto;
 }
 
@@ -1438,29 +1448,30 @@ a.footer-smm-link {
     margin-bottom: 40px;
 }
 
-.mobile-address-link {
+.mobile-tel-link {
+    color: var(--iris-accent-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    padding-left: 40px;
+    padding-right: 35px;
+}
+
+.mobile-email-link {
     color: var(--slate-color);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
-}
-
-
-.mobile-address-link:hover,
-.mobile-address-link:focus {
-    color: var(--iris-accent-color);
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.72px;
-    text-transform: capitalize;
+    padding-left: 40px;
+    padding-top: 40px;
 }
 
 .mobile-smm-list {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-top: 48px;
-    margin-bottom: 40px;
+    margin: 40px auto;
 }
