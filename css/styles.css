@@ -1479,5 +1479,5 @@ a.footer-smm-link {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 40px auto;
+    padding: 40px;
 }
